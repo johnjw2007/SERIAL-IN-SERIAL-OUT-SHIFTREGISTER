@@ -38,16 +38,20 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 Developed by: John Wilfred Thomas J W
 Register Number: 24013517
 */
-
+~~~
 module exp_10(q,clk,sin);
 input clk; 
 input sin; 
 output [3:0] q;
 reg [3:0] q;
-alwats @(posedge clk) begin q[0] <= sin; q[1] <= q[0]; q[2] <= q[1];
+alwats @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
 q[3] <= q[2]; 
 end endmodule
-
+~~~
 **RTL LOGIC FOR SISO Shift Register**
 ![image](https://github.com/user-attachments/assets/52d39079-dfae-4c24-b9d0-658462fd7b0e)
 
